@@ -15,6 +15,7 @@ setup_args = dict(
     license='MIT',
     packages=find_packages(),
     author='Ged-flod',
+    contributors=[{'name': 'Samuel Nde', 'email': 'ndesamuelmbah@gmail.com', 'github': 'ndesamuelmbah'}]
     author_email='gedeon@comptelab.com',
     keywords=['orange sms', 'python orange sms', 'python-orange-sms', 'python-orange'],
     url='https://github.com/ged-flod/python_orange_sms',
