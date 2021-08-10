@@ -31,12 +31,15 @@ pip install python-orange-sms
 
 ```py
 from python_orange_sms import utils
+
 SENDER_NAME = 'Name of your app' # Name of your app in dev console
 AUTH_TOKEN = 'Authorization header' # Authorization header from dev console
+
 message = "The sms message you want to send to the recipient" # Your message
 recipient_phone_number='243xxxxxxxxx' # a Receiver phone number
 dev_phone_number='243xxxxxxxxx' # Sender (your phone number)
 #recipient_phone_number and dev_phone_number are international phone numbers without + or leading zeros:  format regex('^[1-9][\d]{10,14}$')
+
 sms = utils.SMS(AUTH_TOKEN = AUTH_TOKEN, )
 res = sms.send_sms(message=message,
               dev_phone_number=dev_phone_number,       recipient_phone_number=recipient_phone_number)

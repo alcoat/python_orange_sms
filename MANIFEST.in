@@ -1,4 +1,6 @@
 include utils.py
 include README.md
+include requirements.txt
 include __inti__.py
-include exemple.py
+include demo
+include demo/*
