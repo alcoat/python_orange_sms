@@ -4,7 +4,7 @@
 Orange provides API to send SMS to some countries around the world, but using the API may take you a few hours.
 
 
-if you are python developer don't waste your time use our package to save time
+If you are a python developer, don't waste your time. Just use our package and save your time for other meaningful things.
 
 
 ## INSTALL
@@ -18,28 +18,33 @@ pip install python-orange-sms
 1. Go to https://developer.orange.com/ and login or create a new account
 
 2. Go to **my apps**
-   
-3. Selecte your app or create a new **app**
-   
+
+3. Select your app or create a new **app**
+
 4. Get your  **Client ID**
+
+5. Get your  **Authorization header**
+
+6. Get your  **App Name**
 
 ## USAGE
 
 ```py
 from python_orange_sms import utils
+SENDER_NAME = 'Name of your app' # Name of your app in dev console
+AUTH_TOKEN = 'Authorization header' # Authorization header from dev console
+message = "The sms message you want to send to the recipient" # Your message
+recipient_phone_number='243xxxxxxxxx' # a Receiver phone number
+dev_phone_number='243xxxxxxxxx' # Sender (your phone number)
+#recipient_phone_number and dev_phone_number are international phone numbers without + or leading zeros:  format regex('^[1-9][\d]{10,14}$')
+sms = utils.SMS(AUTH_TOKEN = AUTH_TOKEN, )
+res = sms.send_sms(message=message,
+              dev_phone_number=dev_phone_number,       recipient_phone_number=recipient_phone_number)
 
-AUTH_TOKEN = 'Client ID' #  Client ID from orange
-message = "Your Message" # Your message
-to='+243xxxxxxxxx' # Receiver
-from_='+243xxxxxxxxx' # Sender (your phone number)
-
-sms = utils.SMS(AUTH_TOKEN)
-res = sms.send(from_=from_, to=to, message=message)
-
-print(res)  
+print(res)
 
 if res.status_code == 201:
-    print('AVERY THING RIGHT : ', res.text) # SMS sent
+    print('EVERYTHING RIGHT : ', res.text) # SMS sent
 else:
-    print('SAME THING WRONG')
+    print('SAME THING WRONG : ', res.text) # OOPS
 ```
