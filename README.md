@@ -29,7 +29,7 @@ pip install python-orange-sms
 
 ## USAGE
 
-```py
+```python
 from python_orange_sms import utils
 SENDER_NAME = 'Name of your app' # Name of your app in dev console
 AUTH_TOKEN = 'Authorization header' # Authorization header from dev console
