@@ -10,7 +10,7 @@ If you are a python developer, don't waste your time. Just use our package and s
 ## INSTALL
 
 ```sh
-pip install python-orange-sms
+pip install python-orange-sms 
 ```
 
 ## GET CREDENTIALS
